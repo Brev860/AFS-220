@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+   <title>Login Screen</title>
+
+   <body>
+      <div>
+         <form method='POST' action='{% url 'login' %}'>
+               {% csrf_token %}
+                 {{form}}
+            
+             <input type='submit' value="login">
+         <form/>
+      </div>
+   </body>
+</html>
