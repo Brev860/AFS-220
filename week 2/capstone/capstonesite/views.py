@@ -18,6 +18,8 @@ def registration(response):
             form.save()
        
     return render(response, 'registration/registration.html', {'form': form})
-        
+
+def home(request):
+    return render(request, 'home.html')
     
 
