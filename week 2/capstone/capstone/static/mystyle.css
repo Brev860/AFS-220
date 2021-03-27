@@ -1,0 +1,35 @@
+body {
+    background-color:rgb(47, 181, 199);
+    /* This makes it so that the navbar is flush against the edges. */
+    padding: 0px;
+    margin:0px;
+  }
+  
+  /* div {
+    color: rgb(1, 10, 2);
+    margin-left: 20px;
+  } */
+
+  #nav{
+    background-color: white;
+    font-size: 20px;
+    overflow: hidden;
+    font-weight: 600;
+  }
+  #nav>span {
+    float: right;
+    padding: 10px 12px;
+  }
+  #nav>a {
+    float: left;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: black;
+  }
+  /* Current page */
+  #nav>a.active {
+    background-color: rgb(0, 110, 255);
+  }
+  #nav>a:hover{
+    background-color:rgba(2, 77, 175, 0.418);
+  }
