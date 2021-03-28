@@ -1,10 +1,16 @@
 body {
-    background-color:rgb(47, 181, 199);
+    background-color:#19777e;
+    background-image: url("https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTZ8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     /* This makes it so that the navbar is flush against the edges. */
     padding: 0px;
     margin:0px;
+    color: black;
+    
   }
-  
+
   /* div {
     color: rgb(1, 10, 2);
     margin-left: 20px;
@@ -12,6 +18,8 @@ body {
 
   #nav{
     background-color: white;
+    font-family: Georgia;
+    font-style:italic;
     font-size: 20px;
     overflow: hidden;
     font-weight: 600;
@@ -47,16 +55,17 @@ body {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: black;
   }
  
   .mission-text{
+    font-family:cursive;
     text-align: center;
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: black;
   }
 
   .footer {
@@ -80,7 +89,7 @@ body {
     background-color: #f1f1f1;
     margin: 10px;
     padding: 20px;
-    font-size: 11px;
+    font-size: 14px;
   }
   /* .testimonial-section{
     top: 65%;
