@@ -33,3 +33,68 @@ body {
   #nav>a:hover{
     background-color:rgba(2, 77, 175, 0.418);
   }
+  /* .header-image {
+    height: 50%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  } */
+  .headertext {
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+ 
+  .mission-text{
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: white;
+    text-align: center;
+  }
+  .testimonial-section {
+    display: flex;
+    background-color: DodgerBlue;
+    position: absolute;
+    top: 80%;
+    margin: 10px;
+  }
+  
+  .testimonials {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 11px;
+  }
+  /* .testimonial-section{
+    top: 65%;
+    position: absolute;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  
+  .testimonials {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 13px;
+    text-align: center;
+  } */
