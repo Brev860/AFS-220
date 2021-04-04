@@ -4,21 +4,21 @@
   <head>
     {% load static %}
     <link type="text/css" rel="stylesheet" href="{% static 'mystyle.css' %}" />
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
   </head>
-  <title>Login Screen</title>
+  <title>Welcome</title>
 
   <body>
      <!-- Stylings I put in are just placeholders. Feel free to modify. -->
      <nav id="nav">
         <!-- I wanted some sort of name as a placeholder for the moment. This is my dog's name, haha. -->
       <span>Daisy's Voyage</span>
-      <a href="#" class="active">Home</a>
+      <a href="" class="active">Home</a>
       <a href="#">Selection</a>
       <a href="#">About Us</a>
       <a href="#">Contact Us</a>
       <!-- My thought here is that instead of having a registration link we have a sign in link and then on the sign in page we create another link that leads to registration if the user doesn't have an account -->
-      <a href="#">Sign In</a>
+      <a href="{% url 'registration'%}">Sign In</a>
     </nav>
     
     <!-- Header section --> 
@@ -40,7 +40,7 @@
 
                 We believe our service should exceed industry standards and be the best value for the customer.
 
-                We can never be less than the best. </p>
+                We can never be less than the best!!! </p>
        </div>
 
       <!-- Testimonials --> 
