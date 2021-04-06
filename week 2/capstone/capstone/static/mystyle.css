@@ -143,3 +143,5 @@ body {
     font-size: 13px;
     text-align: center;
   } 
+  <a href="{% url 'registration'%}">Sign In</a> {
+    
