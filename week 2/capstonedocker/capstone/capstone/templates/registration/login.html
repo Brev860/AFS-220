@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="{% static 'mystyle.css' %}" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+<title>Login Screen</title>
+
+   <body>
+      <div>
+      <h1> Log In </h1>
+         <form method='POST' action='login'>
+             {% csrf_token %}
+                Username:<input type='text' name='username'>
+                Password:<input type='password' name='password'>     
+               <input type='submit' value='login'>
+         </form>
+      </div>
+   </body>
+</html>

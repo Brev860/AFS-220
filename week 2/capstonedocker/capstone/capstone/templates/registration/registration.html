@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+   
+   <link type="text/css" rel="stylesheet" href="{% static 'mystyle.css' %}" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+   <title>Registration Screen</title>
+
+   <body>
+      <nav id="nav">
+         <!-- I wanted some sort of name as a placeholder for the moment. This is my dog's name, haha. -->
+       <span>Daisy's Voyage</span>
+       <a href="" class="active">Home</a>
+       <a href="#">Selection</a>
+       <a href="#">About Us</a>
+       <a href="#">Contact Us</a>
+       <!-- My thought here is that instead of having a registration link we have a sign in link and then on the sign in page we create another link that leads to registration if the user doesn't have an account -->
+       <a href="{% url 'registration'%}">Sign In</a>
+     </nav>
+      <div>
+      <h1> Register </h1>
+           <form method='POST' action='registration'>
+               {% csrf_token %}
+                  {{form.as_p}}
+           
+             <input type='submit' value="Register">
+         </form>
+         <div>
+         Already have an account?<a href='{% url 'login' %}'>Sign In Here</a>
+         </div>
+      </div>
+   </body>
+</html>
