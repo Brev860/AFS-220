@@ -12,11 +12,11 @@
      <!-- Stylings I put in are just placeholders. Feel free to modify. -->
      <nav id="nav">
         <!-- I wanted some sort of name as a placeholder for the moment. This is my dog's name, haha. -->
-      <span>Daisy's Voyage</span>
-      <a href="" class="active">Home</a>
-      <a href="#">Selection</a>
-      <a href="#">About Us</a>
-      <a href="#">Contact Us</a>
+      <span><a href="{% url 'profile' %}">{{ username_is }}</a></span>
+      <a href="{% url 'home'%}" class="active">Home</a>
+      <a href="{% url 'destinations'%}">Destination</a>
+      <a href="{% url 'about'%}">About Us</a>
+      <a href="{% url 'contact'%}">Contact Us</a>
       <!-- My thought here is that instead of having a registration link we have a sign in link and then on the sign in page we create another link that leads to registration if the user doesn't have an account -->
       <a href="{% url 'registration'%}">Sign In</a>
     </nav>
@@ -25,7 +25,7 @@
     <div class="header-image">
         {% comment %} <img src="{% static 'images/mesut-kaya-eOcyhe5-9sQ-unsplash.jpg' %}"> {% endcomment %}
        <div class="headertext">
-         <h1>Welcome to Daisy's Voyage</h1>
+         <h1>Welcome to BU Travel Agency</h1>
          <h2>Your dream vacation is only a click away</h2>
        </div>
     </div>
