@@ -7,6 +7,8 @@ COPY ./requirements.txt /var/www/html/capstone/requirements.txt
 # Requirements to run uWSGI server
 # Items placed after .tmp are stored in a .tmp file to be removed further down
 RUN apk add --update --no-cache --virtual .tmp gcc libc-dev linux-headers
+# Required for Pillow to work. Pillow interprets images.
+RUN apk add zlib-dev jpeg-dev gcc musl-dev
 # Installs requirements listed in requirements.txt
 RUN pip install -r /var/www/html/capstone/requirements.txt
 # removes .tmp file, because those items are installed so the packages are no longer needed
