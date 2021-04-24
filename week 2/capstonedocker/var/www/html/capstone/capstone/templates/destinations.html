@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link type="text/css" rel="stylesheet" href="{% static 'mystyle.css' %}" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <title>Welcome</title>
+
+  <body>
+     <!-- Stylings I put in are just placeholders. Feel free to modify. -->
+     <nav id="nav">
+        <!-- I wanted some sort of name as a placeholder for the moment. This is my dog's name, haha. -->
+      <span><a href="{% url 'profile' %}">{{ username_is }}</a></span>
+      <a href="{% url 'home'%}" class="active">Home</a>
+      <a href="{% url 'destinations'%}">Destinations</a>
+      <a href="{% url 'about'%}">About Us</a>
+      <a href="{% url 'contact'%}">Contact Us</a>
+      <!-- My thought here is that instead of having a registration link we have a sign in link and then on the sign in page we create another link that leads to registration if the user doesn't have an account -->
+      <a href="{% url 'registration'%}">Sign In</a>
+    </nav>
+
+
+<h1>Destinations</h1>
+
+<div> 
+<form method='POST' action='destinations'>
+ {% csrf_token %}
+  <select id="locations" name="locations">
+    <option value="Select">-- Select Location --</option>
+    <option value="Mexico">Mexico</option>
+    <option value="Caribbean">Caribbean</option>
+    <option value="Europe">Europe</option> 
+  </select>               
+<input type='submit' value="search">
+</div>
+
+
+  
+  {% for dest in des%}
+     <div>
+          <img src="{{dest.img.url}}" alt="img" height=150 width=150>
+          <h3>{{dest.location}}</h3>
+					<h4> {{dest.los}} Nights</h4>
+					<span>{{dest.price}}</span>
+					<p>{{dest.discription}}</p>
+          <button>Wish List</button>
+     </div>
+  {% endfor %}
+
+
+   
+     <!-- Footer -->  
+
+       <Footer class="footer">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-google-plus"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+								<a href="#"><i class="fa fa-youtube"></i></a>
+			 </Footer>  
+
+
+  </body>
+</html>
