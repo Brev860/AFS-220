@@ -23,9 +23,9 @@ PROJECT_PATH = os.path.join(BASE_DIR, 'capstonesite')
 SECRET_KEY = '0u78qvohxgzj@(r$^dh-m)498l$%4y^jj2*-aw7#*icj(klk+7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 AUTH_USER_MODELS = 'capstonesite.Account'
 # Application definition
@@ -122,4 +122,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'capstone/static/')]
 
-# LOGIN_REDIRECT_URL = ''
+# LOGOUT_REDIRECT_URL = '/'

@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 from django.forms import inlineformset_factory
 from django.contrib.auth.forms import UserCreationForm
 from .forms import *
@@ -12,10 +13,10 @@ from django.contrib.auth import authenticate, login, logout
 
 
 def registration(request):
-    form = UserCreationForm()
+    form = RegistrationForm()
 
     if request.method == 'POST': 
-        form = UserCreationForm(request.POST)
+        form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('login')
@@ -41,8 +42,15 @@ def loginPage(request):
            
             login(request, user)
             return redirect('home')
+        else:
+           return messages.info(request, 'Username or Password is Incorrect')
+            
     form = {}
     return render(request, 'registration/login.html', form)
+
+def logoutUser(request):
+    logout(request)
+    return redirect('login')
 
 def contact(request):
     if request.user.is_authenticated:
@@ -81,8 +89,13 @@ def profile(request):
             username_is = request.user
     else:
         username_is = 'Welcome!'
+    context={}
     
-    context = {'username_is': username_is}
+    loc1 = Destination.objects.all()
+    loc2 = Destination2.objects.all()
+    loc3 = Destination3.objects.all()
+   
+    context = {'username_is': username_is, 'loc1': loc1, 'loc2': loc2, 'loc3': loc3}
     return render(request, 'profile.html', context)
 
 def about(request):
@@ -93,3 +106,22 @@ def about(request):
 
     context = {'username_is': username_is}
     return render(request, 'about.html', context)
+
+def fav_dest(request):
+    dest = {}
+    
+    if request.method == 'POST':
+         tab = request.POST.get('table')
+         if 'Destination3' in tab:
+             dest = Destination3.objects.all()
+             
+         elif 'Destination2' in tab:
+             dest = Destination2.objects.all()
+         else:
+             dest = Destination.objects.all() 
+    wish = get_object_or_404(dest, id=request.POST.get('fav_dest'))
+    wish.fav.add(request.user)
+    
+    return redirect('profile')
+    
+    
