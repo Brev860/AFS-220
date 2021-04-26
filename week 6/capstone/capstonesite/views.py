@@ -42,8 +42,8 @@ def loginPage(request):
            
             login(request, user)
             return redirect('home')
-        else:
-           return messages.info(request, 'Username or Password is Incorrect')
+        # else:
+        #    return messages.info(request, 'Username or Password is Incorrect')
             
     form = {}
     return render(request, 'registration/login.html', form)
