@@ -1,0 +1,228 @@
+html {
+  height: 100%;
+  margin: 0 auto;
+}
+body {
+    
+    /* This makes it so that the navbar is flush against the edges. */
+    padding: 0;
+    margin:0 auto;
+    color: black;
+    
+  }
+  /* .bgstyles-winter {
+    background-color:#0a8088;
+    height: 100%;
+    background-image: url("https://media.cntraveler.com/photos/5eb553ca19a3d1d15f47c180/16:9/w_2560%2Cc_limit/WinterTravel-2020-GettyImages-899427986.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  } */
+
+  .bgstyles-beach {
+    background-color:#0a8088;
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+  /* div {
+    color: rgb(1, 10, 2);
+    margin-left: 20px;
+  } */
+
+  #nav{
+    background-color: white;
+    font-style:italic;
+    font-size: 20px;
+    overflow: hidden;
+    font-weight: 600;
+    
+  }
+  @media  only screen and (max-width: 800px) {
+    #nav {
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+    }
+    .borderBottom {
+      border-bottom: black solid 2px;
+      text-decoration: none;
+    }
+    .borderBottom>a {
+      text-decoration: none;
+      color: black
+    }
+    .user>a {
+      color: blue;
+    }
+  }
+  #nav>span {
+    float: right;
+    padding: 10px 12px;
+  }
+  #nav>a {
+    float: left;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: black;
+  }
+  /* Current page */
+  #nav>a.active {
+    background-color: rgb(0, 110, 255);
+  }
+  #nav>a:hover{
+    background-color:rgba(2, 77, 175, 0.418);
+  }
+
+  
+
+  /* .header-image {
+    height: 50%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  } */
+  .headertext {
+    text-align: center;
+    margin-top: 5%;
+    color: black;
+  }
+ 
+  .mission-text{
+    background-color: coral;
+    font-family:cursive;
+  
+    margin: 5% 15%;
+    padding: 25px;
+
+    color: black;
+    border: coral 5px solid;
+    border-radius: 10%;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: white;
+    text-align: center;
+  }
+  .testimonial-section {
+    display: flex;
+    flex-direction: column;
+    background-color: DodgerBlue;
+    /* position: absolute; */
+    /* top: 80%; */
+    width: 100%;
+  }
+  
+  .testimonials {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+  /* .testimonial-section{
+    top: 65%;
+    position: absolute;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  
+  .testimonials {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  */
+
+  .destination {
+    background-color: rgb(0, 140, 255);
+    margin: 20px;
+    width: 50%;
+    
+    /* display: flex;
+    justify-content: center; */
+  }
+  .destination>h3,h4,span,p{
+    text-align: center;
+  }
+  .destination>img{
+    width: 100%;
+    
+  }
+
+  .destinationCenter {
+    display: flex;
+    justify-content: center;
+  }
+
+  .flex{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .profileHeader {
+    text-align: center;
+  }
+
+  .wishListButton>button {
+    background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  .wishListButton>button:hover{
+    background-color: #45a049;
+  }
