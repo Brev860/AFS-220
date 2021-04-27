@@ -63,7 +63,8 @@
         
    {% for dest in loc3%}
        {% if username_is in dest.fav.all%}
-     <div>
+       <div class="destinationCenter">
+        <div class="destination">
           <img src="{{dest.img.url}}" alt="img" height=150 width=150>
           <h3>{{dest.location}}</h3>
 					<h4> {{dest.los}} Nights</h4>
@@ -72,6 +73,7 @@
           <p></P>
           <button>Wish List</button>
      </div> 
+     </div>
      {% endif %}
       {% endfor %}
 
