@@ -10,6 +10,7 @@ body {
     color: black;
     
   }
+
    .bgstyles-winter { 
     background-color:#0a8088;
     height: 100%;
@@ -28,6 +29,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh
+
     
   }
 
@@ -189,6 +191,7 @@ body {
 
   .destination {
     background-color: rgb(228, 152, 81);
+
     margin: 20px;
     width: 50%;
     

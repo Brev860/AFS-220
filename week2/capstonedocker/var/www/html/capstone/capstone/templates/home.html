@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'mystyle.css' %}" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <title>Welcome</title>
+
+  <body>
+     <!-- Stylings I put in are just placeholders. Feel free to modify. -->
+     <nav id="nav">
+        <!-- I wanted some sort of name as a placeholder for the moment. This is my dog's name, haha. -->
+      <span><a href="{% url 'profile' %}">{{ username_is }}</a></span>
+      <a href="{% url 'home'%}" class="active">Home</a>
+      <a href="{% url 'destinations'%}">Destination</a>
+      <a href="{% url 'about'%}">About Us</a>
+      <a href="{% url 'contact'%}">Contact Us</a>
+      <!-- My thought here is that instead of having a registration link we have a sign in link and then on the sign in page we create another link that leads to registration if the user doesn't have an account -->
+      <a href="{% url 'registration'%}">Sign In</a>
+    </nav>
+    
+    <!-- Header section --> 
+    <div class="header-image">
+        {% comment %} <img src="{% static 'images/mesut-kaya-eOcyhe5-9sQ-unsplash.jpg' %}"> {% endcomment %}
+       <div class="headertext">
+         <h1>Welcome to BU Travel Agency</h1>
+         <h2>Your dream vacation is only a click away</h2>
+       </div>
+    </div>
+    <!-- Mission statement-->   
+       <div class="mission-text"> 
+           <h2> Why book with us??? </h2>
+           <p> Our quest is to manage business travel and fulfill vacation dreams through our commitment to personalized, world-class service.
+
+                 We strive to provide the highest level of travel management in the industry.
+
+                We believe that consistent, ethical and quality performance with our customers, vendors, employees and community will result in loyal, long-term relationships.
+
+                We believe our service should exceed industry standards and be the best value for the customer.
+
+                We can never be less than the best!!! </p>
+       </div>
+
+      <!-- Testimonials --> 
+      <div class="testimonial-section">
+         <div class="testimonials"> 
+            <p>"American Airlines was great. Good prices, very helpful. Embassy Suite uptown, Charlotte, North Carolina was wonderful. Breakfast was very good. Happy hour 5-7 PM. Siesta gave us info at front desk. Would recommend. Great mini vacation. Glad I booked with Daisy Voyage"</p>
+            <h2>Kyle P.</h2>
+            <p>Posted: May 2020</p>
+         </div>
+
+         <div class="testimonials"> 
+            <p>"Travel sites can be very expensive if you don’t know how to work your way around. I tried to book a flight with CheapOair and they didn’t even bother to tell me that the flight I booked have increased its price. So I went to Travelocity and I manually booked connecting flights rather than booking a fixed connecting flights. You can save money this way. After booking, I received my itinerary right away from the airline and I saved a lot of money."</p>
+            <h2>Meghan C.</h2>
+            <p>Posted: July 2015</p>
+         </div>
+
+         <div class="testimonials"> 
+            <p>"All travel resources in one place. Rated services and current contact information. Always my go to app for any trip holiday or business. Easy to use interface and honest rating. Great for generating plans for new vacation trips as well"</p>
+            <h2>Brandon K.</h2>
+            <p>Posted: May 2009</p>
+         </div>
+      </div>   
+     <!-- Footer -->  
+
+       <Footer class="footer">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-google-plus"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+								<a href="#"><i class="fa fa-youtube"></i></a>
+			 </Footer>  
+
+
+  </body>
+</html>

@@ -1,0 +1,60 @@
+* {box-sizing:border-box}
+body {
+  background-color:#0a8088;
+  background-image: url("https://media.cntraveler.com/photos/5eb553ca19a3d1d15f47c180/16:9/w_2560%2Cc_limit/WinterTravel-2020-GettyImages-899427986.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* This makes it so that the navbar is flush against the edges. */
+  padding: 0px;
+  margin:0px;
+  color: black;
+  
+}
+
+
+input[type=text], [type=email], select, textarea, [type=password] {
+  width:max-content;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  /* background-color: #f2f2f2; */
+  padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+   
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  

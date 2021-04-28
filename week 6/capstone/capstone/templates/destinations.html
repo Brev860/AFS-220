@@ -13,7 +13,7 @@
     <title>Welcome</title>
   </head>
  
-  ​
+  
   <body class="bgstyles-beach">
     <!-- Stylings I put in are just placeholders. Feel free to modify. -->
     <nav id="nav">
@@ -30,9 +30,9 @@
       <a href="{% url 'login'%}">Sign In</a>
       {% endif %}
     </nav>
-    ​ ​
+    
     <h1>Destinations</h1>
-    ​
+    
     <div>
       <form method="POST" action="destinations">
         {% csrf_token %}
@@ -45,15 +45,17 @@
         <input type="submit" value="search" />
       </form>
     </div>
-    ​ ​ {% for dest in des%}
+     {% for dest in des%}
     
     <div class="destinationCenter">
       <div class="destination">
+        
         <img src="{{dest.img.url}}" alt="img" height=350 width=150 />
         <h3>{{dest.location}}</h3>
         <h4>{{dest.los}} Nights</h4>
         <p>{{dest.price}}: per night(flight included)</p>
         <p>{{dest.discription}}</p>
+        
         {% if user.is_authenticated %}
         <form action="fav" method="POST">
           {% csrf_token %}
@@ -77,10 +79,10 @@
       </div>
     </div>
   </div>
-    {% endfor %} ​ ​
+    {% endfor %} 
 
     <!-- Footer -->
-    ​
+    
     <footer class="footer">
       <a href="#"><i class="fa fa-facebook"></i></a>
       <a href="#"><i class="fa fa-twitter"></i></a>
@@ -88,6 +90,6 @@
       <a href="#"><i class="fa fa-linkedin"></i></a>
       <a href="#"><i class="fa fa-youtube"></i></a>
     </footer>
-    ​ ​
+    
   </body>
 </html>
