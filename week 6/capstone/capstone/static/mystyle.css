@@ -10,14 +10,16 @@ body {
     color: black;
     
   }
-  /* .bgstyles-winter {
+
+   .bgstyles-winter { 
     background-color:#0a8088;
     height: 100%;
     background-image: url("https://media.cntraveler.com/photos/5eb553ca19a3d1d15f47c180/16:9/w_2560%2Cc_limit/WinterTravel-2020-GettyImages-899427986.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  } */
+    height: 100vh
+  } 
 
   .bgstyles-beach {
     background-color:#0a8088;
@@ -26,6 +28,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh
+
     
   }
 
@@ -186,7 +190,8 @@ body {
   */
 
   .destination {
-    background-color: rgb(0, 140, 255);
+    background-color: rgb(228, 152, 81);
+
     margin: 20px;
     width: 50%;
     

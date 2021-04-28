@@ -27,21 +27,24 @@
       {% endif %}
     </nav>
 
-      <h3>Contact Us</h3>
+      <h1>Contact Us</h1>
 
 <div class="container">
   <form method='POST' action="contact">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      {% csrf_token %}
+    {% comment %} <label for="fname">First Name</label>
+    <input type="text" id="firstname" name="firstname" placeholder="Your name..">
 
     <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
 
     <label for="email">Email</label>
     <input type="email" id="email" name="email" placeholder="Your email">
     
     <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea> {% endcomment %}
+
+    {{form.as_p}}
 
     <input type="submit" value="Submit">
   </form>

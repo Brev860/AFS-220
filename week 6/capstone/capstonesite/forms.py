@@ -14,4 +14,10 @@ class RegistrationForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
 
 
+class ContactForm(forms.ModelForm):
 
+    class Meta:
+        model = Contact
+        fields = ['firstname', 'lastname', 'email', 'message']
+    
+ 
