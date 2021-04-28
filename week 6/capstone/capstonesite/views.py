@@ -39,11 +39,11 @@ def loginPage(request):
         user = authenticate(username = username , password = password)
         
         if user is not None:
-           
+            
             login(request, user)
             return redirect('home')
-        else:
-           return messages.info(request, 'Username or Password is Incorrect')
+        # else:
+        #    return messages.info(request, 'Username or Password is Incorrect')
             
     form = {}
     return render(request, 'registration/login.html', form)
@@ -58,7 +58,14 @@ def contact(request):
     else:
         username_is = 'Welcome!'
 
-    context = {'username_is': username_is}
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+       
+    context = {'username_is': username_is, 'form': form}
     return render(request, 'contact.html', context)
 
 def destinations(request):

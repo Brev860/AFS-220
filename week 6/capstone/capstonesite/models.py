@@ -28,4 +28,9 @@ class Destination3(models.Model):
     fav = models.ManyToManyField(User, related_name='fav_destinations3')
 
 
-    
+class Contact(models.Model): 
+
+    firstname = models.CharField(max_length=50)   
+    lastname = models.CharField(max_length=50)
+    email = models.EmailField(max_length=254)
+    message = models.TextField()
