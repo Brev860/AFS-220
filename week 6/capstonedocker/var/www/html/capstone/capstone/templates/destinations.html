@@ -30,9 +30,11 @@
       <a href="{% url 'login'%}">Sign In</a>
       {% endif %}
     </nav>
-    ​ ​
-    <h1>Destinations</h1>
-    ​
+    ​<div class="headertext">   
+      <div class='border-text'> ​
+         <h1>Destinations</h1>
+    ​ </div>
+    </div>
     <div>
       <form method="POST" action="destinations">
         {% csrf_token %}
@@ -49,28 +51,23 @@
     
     <div class="destinationCenter">
       <div class="destination">
-        <img src="{{dest.img.url}}" alt="img" />
+        <img src="{{dest.img.url}}" alt="img" height=350 width=150 />
         <h3>{{dest.location}}</h3>
         <h4>{{dest.los}} Nights</h4>
-        <p>{{dest.price}}</p>
+        <p>{{dest.price}}: per night(flight included)</p>
         <p>{{dest.discription}}</p>
         {% if user.is_authenticated %}
         <form action="fav" method="POST">
           {% csrf_token %}
           <input type="hidden" id="table" name="table" value="{{dest}}" />
           
-          <button
-          
-            type="submit"
-            id="fav_dest"
-            name="fav_dest"
-            value="{{dest.id}}"
-           
-          >
+          <button type="submit" id="fav_dest" name="fav_dest"value="{{dest.id}}">
             Wish
           </button>
+
         </form>
-        {% else %} {% csrf_token %}
+       {% else %} 
+           {% csrf_token %}
         <a class="wishListButton"  href="{% url 'login'%}"><button>Wish</button></a>
 
         {% endif %}

@@ -26,7 +26,10 @@
 
 
       <div>
+<div class="headertext">
+  <div class='border-text'>     
       <h1> Log In </h1>
+  </div>    
       <div class="container">
          <form method='POST' action='login'>
              {% csrf_token %}
@@ -38,6 +41,8 @@
       </div>  
       <p>If you don't have a login <a href="{% url 'registration'%}"><strong> Register here</strong></a></p> 
       </div>
+    </div>
+  
       <Footer class="footer">
         <a href="#"><i class="fa fa-facebook"></i></a>
         <a href="#"><i class="fa fa-twitter"></i></a>

@@ -26,17 +26,21 @@
       <a href="{% url 'login'%}">Sign In</a>
       {% endif %}
     </nav>
+    <div class="headertext">   
+       <div class='border-text'>
        <h1 class="profileHeader">WishList</h1>
-      
+      </div>
+     </div> 
+     
       {% if user.is_authenticated%}
        {% for dest in loc1%}
        {% if username_is in dest.fav.all%}
        <div class="destinationCenter">
-     <div class="destination">
-          <img src="{{dest.img.url}}" alt="img" height=150 width=150>
+         <div class="destination">
+          <img src="{{dest.img.url}}" alt="img" height=350 width=150>
           <h3>{{dest.location}}</h3>
 					<h4> {{dest.los}} Nights</h4>
-					<span>{{dest.price}}</span>
+					<span>{{dest.price}}: per night(flight included)</span>
 					<p>{{dest.discription}}</p>
           <p></P>
           <button>Wish List</button>
@@ -49,7 +53,7 @@
        {% if username_is in dest.fav.all%}
        <div class="destinationCenter">
         <div class="destination">
-          <img src="{{dest.img.url}}" alt="img" height=150 width=150>
+          <img src="{{dest.img.url}}" alt="img" height=350 width=150>
           <h3>{{dest.location}}</h3>
 					<h4> {{dest.los}} Nights</h4>
 					<p>{{dest.price}}</p>
@@ -65,7 +69,7 @@
        {% if username_is in dest.fav.all%}
        <div class="destinationCenter">
         <div class="destination">
-          <img src="{{dest.img.url}}" alt="img" height=150 width=150>
+          <img src="{{dest.img.url}}" alt="img" height=350 width=150>
           <h3>{{dest.location}}</h3>
 					<h4> {{dest.los}} Nights</h4>
 					<span>{{dest.price}}</span>
